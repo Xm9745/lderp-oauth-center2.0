@@ -1,0 +1,175 @@
+server:
+  port: 7001
+spring:
+  application:
+    name: lderp-oauth-center
+  redis:
+      database: 0
+      host: 39.104.118.63
+      port: 6379
+      user:
+      password: lderpredis@111
+      timeout: 3000
+  datasource:
+    url: jdbc:mysql://39.104.118.63:3306/lderp_oauth?useUnicode=true&characterEncoding=gbk&zeroDateTimeBehavior=convertToNull
+    username: root
+    password: lderpnew@666
+    driver-class-name: com.mysql.jdbc.Driver
+  jackson:
+      property-naming-strategy: CAMEL_CASE_TO_LOWER_CASE_WITH_UNDERSCORES
+access_token:
+  store-jwt: false
+  jwt-signing-key: xiaoweijiagou
+  add-userinfo: false
+eureka:
+  client:
+    service-url:
+      defaultZone: http://root:lxm0987@8.130.168.9:7776/eureka/
+  instance:
+    instance-id: ${spring.application.name}:${server.port}
+    ip-address: 8.130.168.9
+    prefer-ip-address: true
+moduleName: lderp-oauth-center
+feign:
+  hystrix:
+    enabled: true
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 30000
+
+
+#server:
+#  port: 8001
+#spring:
+#  application:
+#    name: lderp-oauth-center
+#  redis:
+#      database: 0
+#      host: 39.104.118.63
+#      port: 6379
+#      user:
+#      password: lderpredis@111
+#      timeout: 3000
+#  datasource:
+#    url: jdbc:mysql://39.104.118.63:3306/lderp_oauth?useUnicode=true&characterEncoding=gbk&zeroDateTimeBehavior=convertToNull
+#    username: root
+#    password: lderpnew@666
+#    driver-class-name: com.mysql.jdbc.Driver
+#  jackson:
+#      property-naming-strategy: CAMEL_CASE_TO_LOWER_CASE_WITH_UNDERSCORES
+#access_token:
+#  store-jwt: false
+#  jwt-signing-key: xiaoweijiagou
+#  add-userinfo: false
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://root:lxm0987@39.104.118.63:7799/eureka/
+#  instance:
+#    instance-id: ${spring.application.name}:${server.port}
+#    ip-address: 39.104.118.63
+#    prefer-ip-address: true
+#moduleName: lderp-oauth-center
+#feign:
+#  hystrix:
+#    enabled: true
+#hystrix:
+#  command:
+#    default:
+#      execution:
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds: 30000
+
+
+
+#server:
+#  port: 7002
+#spring:
+#  application:
+#    name: lderp-oauth-center
+#  redis:
+#      database: 0
+#      host: 39.104.203.237
+#      port: 6379
+#      user:
+#      password: liaoliaoredis@8888
+#      timeout: 3000
+#  datasource:
+#    url: jdbc:mysql://39.104.203.237:3306/lderp_oauth?useUnicode=true&characterEncoding=gbk&zeroDateTimeBehavior=convertToNull
+#    username: root
+#    password: liaoliao@8888
+#    driver-class-name: com.mysql.jdbc.Driver
+#  jackson:
+#      property-naming-strategy: CAMEL_CASE_TO_LOWER_CASE_WITH_UNDERSCORES
+#access_token:
+#  store-jwt: false
+#  jwt-signing-key: xiaoweijiagou
+#  add-userinfo: false
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://root:123456@39.104.203.237:7777/eureka/
+#moduleName: lderp-oauth-center
+#feign:
+#  hystrix:
+#    enabled: true
+#hystrix:
+#  command:
+#    default:
+#      execution:
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds: 30000
+
+
+
+#server:
+#  port: 7001
+#spring:
+#  application:
+#    name: lderp-oauth-center
+#  redis:
+#      database: 0
+#      host: 127.0.0.1
+#      port: 6379
+#      user:
+#      password:
+#      timeout: 3000
+#  datasource:
+#    url: jdbc:mysql://127.0.0.1:3306/lderp_oauth?useUnicode=true&characterEncoding=gbk&zeroDateTimeBehavior=convertToNull
+#    username: root
+#    password:
+#    driver-class-name: com.mysql.jdbc.Driver
+#  jackson:
+#      property-naming-strategy: CAMEL_CASE_TO_LOWER_CASE_WITH_UNDERSCORES
+##  sleuth:
+##    sampler:
+##      percentage: 1.0
+##  zipkin:
+##    base-url: http://localhost:7700
+#access_token:
+#  store-jwt: false
+#  jwt-signing-key: xiaoweijiagou
+#  add-userinfo: false
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://root:123456@127.0.0.1:7776/eureka/
+#moduleName: lderp-oauth-center
+#feign:
+#  hystrix:
+#    enabled: true
+#hystrix:
+#  command:
+#    default:
+#      execution:
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds: 20000
+##logging:
+##  level: info
